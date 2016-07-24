@@ -4,7 +4,7 @@
 
 
 .character-index__list {
-  padding: 50px 0 0 0;
+  padding: 50px 0 50px 0;
 
   @include breakpoint($small) {
     @include row;

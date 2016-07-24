@@ -19,7 +19,6 @@
 <h2>Latest Comic Appearances</h2>
 <ul class="character-profile__comic-list">
   {{#each characterComics}}
-  {{log this.urls}}
     <li class="character-profile__comic-list-item">
       <a href="{{this.urls.[0].url}}">
       <img src="{{ this.thumbnail.path}}.{{this.thumbnail.extension}}" alt="{{this.title}}"/></a></li>

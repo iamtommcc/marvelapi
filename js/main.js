@@ -517,7 +517,9 @@ var CharacterViews = function (_View) {
       }
       mainPage.classList.remove('is-covered');
 
-      document.querySelector('.js-page-content').innerHTML = (0, _loading2.default)();
+      document.querySelector('.js-page-content').innerHTML = (0, _loading2.default)({
+        message: "Loading all Marvel characters, hang tight!"
+      });
 
       promise.then(function (characters) {
         characters = (0, _sortBy2.default)(characters, function (character) {
@@ -610,18 +612,16 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.characterComics : depth0),{"name":"each","hash":{},"fn":container.program(6, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\r\n  </div>\r\n";
 },"6":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=container.escapeExpression, alias2=container.lambda;
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 
-  return "  "
-    + alias1(helpers.log.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.urls : depth0),{"name":"log","hash":{},"data":data}))
-    + "\r\n    <li class=\"character-profile__comic-list-item\">\r\n      <a href=\""
-    + alias1(alias2(((stack1 = ((stack1 = (depth0 != null ? depth0.urls : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.url : stack1), depth0))
+  return "    <li class=\"character-profile__comic-list-item\">\r\n      <a href=\""
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.urls : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.url : stack1), depth0))
     + "\">\r\n      <img src=\""
-    + alias1(alias2(((stack1 = (depth0 != null ? depth0.thumbnail : depth0)) != null ? stack1.path : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.thumbnail : depth0)) != null ? stack1.path : stack1), depth0))
     + "."
-    + alias1(alias2(((stack1 = (depth0 != null ? depth0.thumbnail : depth0)) != null ? stack1.extension : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.thumbnail : depth0)) != null ? stack1.extension : stack1), depth0))
     + "\" alt=\""
-    + alias1(alias2((depth0 != null ? depth0.title : depth0), depth0))
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "\"/></a></li>\r\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression, alias3=depth0 != null ? depth0 : {};
@@ -643,8 +643,18 @@ module.exports = HandlebarsCompiler.template({"1":function(container,depth0,help
 },{"hbsfy/runtime":32}],10:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
-module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"loading\">\r\n  <div class=\"loading-spinner\">\r\n  </div>\r\n</div>";
+module.exports = HandlebarsCompiler.template({"1":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "  <div class=\"loading-message\">"
+    + container.escapeExpression(((helper = (helper = helpers.message || (depth0 != null ? depth0.message : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : {},{"name":"message","hash":{},"data":data}) : helper)))
+    + "</div>\r\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"loading\">\r\n"
+    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.message : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "  <div class=\"loading-spinner\">\r\n  </div>\r\n</div>";
 },"useData":true});
 
 },{"hbsfy/runtime":32}],11:[function(require,module,exports){

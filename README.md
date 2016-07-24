@@ -1,29 +1,15 @@
-# Slate 
-A nifty bunch of boilerplate that serves as a great base for front-end projects. This was created for my own personal convenience. If people *actually use this thing* I'll be sure to improve it.
-
-
-
-Technically speaking this starter kit doesn't do much. It is essentially the bare minimum for writing modern front-end projects
-
-* Component-friendly folder structure
-* SASS, PostCSS, Autoprefixer, Browser Sync, Browserify, Babel, Normalize.css
-* Globs your SASS so you don't have to keep updating `main.scss` every time you add a new component. Be careful with this though!
-* All powered by Gulp.
+# Marvel API Demo 
+A basic SPA app written without the use of any major frameworks, relying only on various microlibraries.
 
 
 ## Installation & Usage
+ 
+ * Clone or download repo
+ * `npm install`
+ * `npm run serve`
+ * Visit `http://localhost:8080` in any modern browser.
 
-Requires Node & NPM. 
-
-Clone to download the repo, navigate to it, and run `npm install`.
-
-When you're ready to begin coding, just run `gulp`. Gulp will compile everything and keep watching.
-
-## Configuration
-
-Edit the `settings` constant at the top of `gulpfile.babel.js` to change paths etc.
-
-## Roadmap
+## Areas
 
 - [ ] Add some super dooper basic flexbox grid (because float grid systems are so 2014).
 

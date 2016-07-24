@@ -52,7 +52,10 @@ export default class CharacterViews extends View {
     }
     mainPage.classList.remove('is-covered');
 
-  document.querySelector('.js-page-content').innerHTML = loadingTemplate();
+  document.querySelector('.js-page-content').innerHTML = loadingTemplate(
+    {
+      message: "Loading all Marvel characters, hang tight!"
+    });
 
     promise.then(characters => {
       characters = sortBy(characters, character => character.name);
