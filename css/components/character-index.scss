@@ -1,0 +1,30 @@
+.character-index__body {
+  background: #232323;
+}
+
+
+.character-index__list {
+  padding: 50px 0 0 0;
+
+  @include breakpoint($small) {
+    @include row;
+
+  }
+}
+
+.character-index__list-item {
+  width: 100%;
+  @include breakpoint($small) {
+    @include col(6);
+
+  }
+
+  @include breakpoint($medium) {
+    @include col(4);
+
+  }
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: $gutter;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,130 @@
+.character-profile {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  transform: translateX(100vw);
+  background: #232323;
+  box-shadow: 0 4px 60px 10px black;
+
+  h1, h2 {
+    text-align: center;
+
+    @include breakpoint($medium) {
+      text-align: left;
+    }
+  }
+
+  h2 {
+    @include breakpoint($medium) {
+      clear: both;
+      margin-top: 100px;
+    }
+  }
+}
+
+.character-profile__button {
+  display: block;
+  margin: 25px 0;
+
+  @include breakpoint($medium) {
+    width: 200px;
+
+  }
+
+}
+.character-profile.is-visible {
+  position: absolute;
+  transform: none;
+}
+.character-profile.is-entering {
+  position: fixed;
+   animation: slideIn 0.7s ease forwards;
+ }
+
+.character-profile.is-exiting {
+  position: fixed;
+  animation: slideOut 0.5s ease-out forwards;
+}
+
+
+.character-profile__comic-list {
+  padding: 0;
+
+  @include breakpoint($medium) {
+    @include row;
+
+  }
+}
+
+.character-profile__comic-list-item {
+  padding: 0;
+  list-style-type: none;
+
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: $gutter;
+
+  @include breakpoint($medium) {
+    @include col;
+
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    transition: opacity 250ms ease;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+
+.character-profile__headshot {
+
+  @include breakpoint($medium) {
+    float: left;
+  }
+
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  background-size: cover;
+
+}
+
+.character-profile__bio {
+
+  @include breakpoint($medium) {
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  h1, p {
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.character-profile__bio--centered {
+  align-items: center;
+
+  @include breakpoint($medium) {
+    min-height: 200px;
+
+  }
+
+}

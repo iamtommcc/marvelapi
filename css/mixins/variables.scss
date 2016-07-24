@@ -1,0 +1,27 @@
+$main-red: #cf0000;
+
+// Breakpoints
+$medium: 940px;
+$small: 600px;
+
+$columns: 12;
+$gutter: 15px;
+  @mixin col($i: 0) {
+    margin-left: $gutter;
+    @if ($i != 0) {
+      width: 100%;
+      max-width: calc((100% / #{$columns} * #{$i}) - #{$gutter});
+      flex-basis: calc((100% / #{$columns} * #{$i}) - #{$gutter});
+      flex: 0 0 auto;
+  } @else {
+    flex: 1;
+  }
+
+  }
+
+@mixin row {
+   display: flex;
+   flex-wrap: wrap;
+  justify-content: flex-start;
+   margin-left: -$gutter;
+ }

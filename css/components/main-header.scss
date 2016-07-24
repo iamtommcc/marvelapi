@@ -1,0 +1,16 @@
+.main-header {
+  margin-bottom: 50px;
+}
+
+.main-header__description {
+  font-size: 1.2rem;
+}
+
+.main-header__search {
+  width: 100%;
+  background: #232323;
+  border: 0;
+  font-size: 1.6rem;
+  padding: 0.3rem 0.6rem 0.4rem 0.6rem;
+  outline-color: $main-red;
+}

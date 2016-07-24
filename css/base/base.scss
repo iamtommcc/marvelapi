@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background : #111;
+	color: white;
+	font-family: 'Roboto', 'Trade Gothic', 'Arial', sans-serif;
+
+	font-size: 1.2em;
+}
+
+
+html, body {
+	overflow-x: hidden;
+}
+.container {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 $gutter;
+}
+
+.page.is-covered {
+	height: 100vh;
+	overflow: hidden;
+}

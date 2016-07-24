@@ -1,0 +1,29 @@
+
+  <div class="container">
+    <a class="button character-profile__button" href="/">Back To Index</a>
+    <header class="character-profile__header">
+
+    <div class="character-profile__headshot" style="background-image:url({{character.thumbnail.path}}.{{character.thumbnail.extension}});">
+      </div>
+    <div class="character-profile__bio {{#unless character.description}}character-profile__bio--centered{{/unless}}">
+    <h1>{{character.name}}</h1>
+      {{#if character.description}}
+    <p>{{character.description}}</p>
+      {{/if}}
+      </div>
+    </header>
+
+
+
+{{#if characterComics}}
+<h2>Latest Comic Appearances</h2>
+<ul class="character-profile__comic-list">
+  {{#each characterComics}}
+  {{log this.urls}}
+    <li class="character-profile__comic-list-item">
+      <a href="{{this.urls.[0].url}}">
+      <img src="{{ this.thumbnail.path}}.{{this.thumbnail.extension}}" alt="{{this.title}}"/></a></li>
+  {{/each}}
+</ul>
+  </div>
+{{/if}}
