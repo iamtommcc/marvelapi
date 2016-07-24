@@ -65,6 +65,8 @@ export default class CharacterViews extends View {
       var event = document.createEvent('HTMLEvents');
       event.initEvent('input', true, false);
       document.querySelector('.js-index-search').dispatchEvent(event);
+    }).catch( (error) => {
+      alert(error);
     });
 
 

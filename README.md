@@ -8,12 +8,7 @@ A basic SPA app written without the use of any major frameworks, relying only on
  * `npm install`
  * `npm run serve`
  * Visit `http://localhost:8080` in any modern browser.
-
-## Areas
-
-- [ ] Add some super dooper basic flexbox grid (because float grid systems are so 2014).
-
-
+ 
 ## License
 
 The MIT License (MIT)

@@ -72,7 +72,9 @@ export default class Model {
             if (shouldCache && store.enabled) store.set(query, results);
 
             resolve(results);
-          })
+          }).catch( () => {
+            reject('There was an error communicating with the Marvel API. Please try again later.');
+          });
         });
       }
     });

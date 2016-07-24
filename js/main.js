@@ -94,6 +94,8 @@ var Model = function () {
               if (shouldCache && _store2.default.enabled) _store2.default.set(query, results);
 
               resolve(results);
+            }).catch(function () {
+              reject('There was an error communicating with the Marvel API. Please try again later.');
             });
           });
         }
@@ -531,6 +533,8 @@ var CharacterViews = function (_View) {
         var event = document.createEvent('HTMLEvents');
         event.initEvent('input', true, false);
         document.querySelector('.js-index-search').dispatchEvent(event);
+      }).catch(function (error) {
+        alert(error);
       });
     }
 
