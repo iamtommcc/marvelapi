@@ -1,9 +1,14 @@
 # Marvel API Demo 
-A basic SPA app written without the use of any major frameworks, relying only on various microlibraries.
+A basic MVC single-page app written without the use of any major JS frameworks. It relies on only a handful of microlibraries (Page.js for routing, Handlebars for templates plus a handful of lodash functions and a few polyfills).
 
 
-## Installation & Usage
- 
+## See The App In Action
+
+https://marvel-api-app.herokuapp.com/
+
+## Running Locally
+
+
  * Clone or download repo
  * `npm install`
  * `npm run serve`
