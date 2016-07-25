@@ -49,7 +49,11 @@ export default class CharacterViews extends View {
       characterProfile.classList.remove('is-visible');
       characterProfile.classList.remove('is-entering');
       characterProfile.classList.add('is-exiting');
+
+      window.setTimeout( () => characterProfile.classList.remove('is-exiting'), 500);
     }
+
+
     mainPage.classList.remove('is-covered');
 
   document.querySelector('.js-page-content').innerHTML = loadingTemplate(

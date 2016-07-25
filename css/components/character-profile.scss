@@ -1,6 +1,7 @@
 .character-profile {
   position: absolute;
   width: 100%;
+  display: none;
   min-height: 100vh;
   top: 0;
   transform: translateX(100vw);
@@ -35,15 +36,18 @@
 }
 .character-profile.is-visible {
   position: absolute;
+  display: block;
   transform: none;
 }
 .character-profile.is-entering {
   position: fixed;
+  display: block;
    animation: slideIn 0.7s ease forwards;
  }
 
 .character-profile.is-exiting {
   position: fixed;
+  display: block;
   animation: slideOut 0.5s ease-out forwards;
 }
 

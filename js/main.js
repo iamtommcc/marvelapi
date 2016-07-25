@@ -97,6 +97,8 @@ var Model = function () {
             }).catch(function () {
               reject('There was an error communicating with the Marvel API. Please try again later.');
             });
+          }).catch(function () {
+            reject('Could not establish initial connection to the Marvel API. Please try again later.');
           });
         }
       });
@@ -156,7 +158,7 @@ var Model = function () {
   }, {
     key: 'API_URL',
     get: function get() {
-      return 'http://gateway.marvel.com:80/v1/public/';
+      return 'https://gateway.marvel.com/v1/public/';
     }
   }, {
     key: 'PUBLIC_KEY',
@@ -516,7 +518,12 @@ var CharacterViews = function (_View) {
         characterProfile.classList.remove('is-visible');
         characterProfile.classList.remove('is-entering');
         characterProfile.classList.add('is-exiting');
+
+        window.setTimeout(function () {
+          return characterProfile.classList.remove('is-exiting');
+        }, 500);
       }
+
       mainPage.classList.remove('is-covered');
 
       document.querySelector('.js-page-content').innerHTML = (0, _loading2.default)({

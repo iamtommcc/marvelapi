@@ -16,7 +16,7 @@ export default class Model {
   }
 
   static get API_URL() {
-    return 'http://gateway.marvel.com:80/v1/public/';
+    return 'https://gateway.marvel.com/v1/public/';
   }
 
   static get PUBLIC_KEY() {
@@ -75,6 +75,8 @@ export default class Model {
           }).catch( () => {
             reject('There was an error communicating with the Marvel API. Please try again later.');
           });
+        }).catch(() => {
+          reject('Could not establish initial connection to the Marvel API. Please try again later.');
         });
       }
     });
